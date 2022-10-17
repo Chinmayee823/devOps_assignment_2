@@ -19,6 +19,7 @@ public class BlobCreation {
         try {
         	FileInputStream i=new FileInputStream("D:\\\\demo\\\\demo.zip");
         	BufferedInputStream b=new BufferedInputStream(i);
+        	System.out.println("gen pdf");
             DataInputStream dataInputStream = new DataInputStream(b);
             dataInputStream.readFully(bytes);
             System.out.println("gen pdf");
@@ -30,7 +31,6 @@ public class BlobCreation {
             dataInputStream.close();
             Blob blob=new javax.sql.rowset.serial.SerialBlob(bytes);
             String s=blob.toString();
-            System.out.println("PDF is generated!");
             return "success";
         }
         catch (Exception e) {
