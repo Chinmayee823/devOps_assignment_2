@@ -7,9 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GenPdfApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Generate PDF Method");
+		System.out.println("Generate PDF before");
 		SpringApplication.run(GenPdfApplication.class, args);
 		System.out.println("Generate PDF");
 	}
-
 }
